@@ -2,26 +2,32 @@
     <button type="button" class="btn btn-lg btn-block btn-primary" [routerLink]="['']">
       <h1 class="text-light">STORE DEMO</h1>
     </button>
+    <div class="d-flex flex-row align-items-center">
+      <button class="btn btn-primary" data-toggle="collapse" data-target="#menu">
+        <ion-icon name="menu-outline" style="font-size: 32px;"></ion-icon>
+      </button>
+    </div>
 </nav>
-<router-outlet></router-outlet>
-<div class="d-flex h-100 flex-row justify-content-around my-5">
-    <div class="text-center">
-       <button class="bg-white" [routerLink]="['/customers']">
-        <ion-icon name="people" style="font-size: 128px; color: blue"></ion-icon>
-        <h1>CUSTOMERS</h1>
-      </button>
-    </div>
-    <div class="text-center">
-        <button class='bg-white' [routerLink]="['/orders']">
-          <ion-icon name="basket" style="font-size: 128px; color: blue"></ion-icon>
-          <h1>ORDERS</h1>
+<div class="container collapse show" id="menu">
+  <div class="d-flex h-100 flex-row justify-content-around my-5">
+      <div class="text-center">
+        <button class="bg-white" [routerLink]="['/customers']">
+          <ion-icon name="people" style="font-size: 128px; color: blue"></ion-icon>
+          <h1>CUSTOMERS</h1>
         </button>
-    </div>
-    <div class="text-center">
-      <button class="bg-white" [routerLink]="['/products']">
-        <ion-icon name="pizza" style="font-size: 128px; color: blue"></ion-icon>
-        <h1>PRODUCTS</h1>
-      </button>
-    </div>
+      </div>
+      <div class="text-center">
+          <button class='bg-white' [routerLink]="['/orders']">
+            <ion-icon name="basket" style="font-size: 128px; color: blue"></ion-icon>
+            <h1>ORDERS</h1>
+          </button>
+      </div>
+      <div class="text-center">
+        <button class="bg-white" [routerLink]="['/products']">
+          <ion-icon name="pizza" style="font-size: 128px; color: blue"></ion-icon>
+          <h1>PRODUCTS</h1>
+        </button>
+      </div>
+  </div>
 </div>
-
+<router-outlet></router-outlet>
